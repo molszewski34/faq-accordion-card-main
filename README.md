@@ -1,6 +1,6 @@
 # faq-accordion-main
 
-![image](https://github.com/molszewski34/FrontEnd-projects/blob/main/cover-3-column-preview-card-component-main.png)
+![image](https://github.com/molszewski34/faq-accordion-card-main/blob/main/faq-accordion-card-main.png)
 
 faq-accordion-main is a simple site build with only html and css. Site offers mobile and desktop viewport to navigate it in optimal way. This project is based on FrontEnd Mentor challenge with link [here](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam)
 
@@ -38,7 +38,7 @@ Accordion and text is scalable for desktop and laptops. It do not cover a scalab
 
 In this project i learned about usage of :target which allows to change values of elements by clicking on link. 
 
- Big thanks to Kevin Powell and his tutorial about it https://www.youtube.com/watch?v=U9VF-4euyRo
+ Big thanks to Julio Codes and his tutorial about it https://www.youtube.com/watch?v=MXrtXg1kpVs
 
 
 
