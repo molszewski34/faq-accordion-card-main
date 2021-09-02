@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*,::after,::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    /* ## Colors */
+
+    /* ### Primary */
+    
+    /* #### Text */
+    
+    --anchor-tag-color-target: hsl(238, 29%, 16%);
+    --anchor-tag-color-hover: hsl(14, 88%, 65%);
+    
+    /* #### Gradient */
+    
+    /* Background gradient: */
+    
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+
+    
+     
+    /* #### Dividers */
+
+    --divider: hsl(240, 5%, 91%);
+  
+    /* #### Text */
+
+    --paragraph-darker: hsl(237, 12%, 33%);
+    --paragraph-lighter: hsl(240, 6%, 50%);
+}
+
+html{
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+
+/* REUSABLE STYLES  */
+p{
+    color: var(--paragraph-darker)
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+p:hover{
+    color: var(--anchor-tag-color-hover);
+}
+
+h1{
+    margin: 1em;
+    color: #000;
+}
+
+/* REUSABLE STYLES END */
+
+
+/* MOBILE VIEW */
+
+body{
+    background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    position: relative;  
+}
+
+main{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 500px;
+    border-radius: 20px;
+    position: absolute;
+    top: 7em;
+    align-items: center;
+    z-index: 1;
+
+    height: 550px;
+ 
+}
+
+/* IMG      */
+
+.img-container{
+transform: translateY(-50%);
+margin-bottom: -8em;
+display: flex;
+align-items: center;
+background-image: url(images/bg-pattern-mobile.svg);
+background-repeat: no-repeat;
+background-position: 100%  100%;
+position: relative;
+z-index: 3;
+}
+
+
+.img-desktop{
+    display: none;
+}
+
+.img-desktop-box{
+    display: none;
+}
+
+
+.accordion-wrapper{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: .8rem;
+    color: var(--paragraph-lighter);  
+}
+.accordion-item{
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    margin-bottom: 1em;
+
+}
+
+
+.accordion-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.accordion-link img{
+    width: 15px;
+    height: 10px;
+ 
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+ margin: 1em 0;
+    line-height: 1.5em;
+    text-align: left;
+
+  }
+  
+  .accordion-item:target .answer{
+    max-height: 20rem;
+
+  }
+  
+  .accordion-item:target p {
+    font-weight: 700;
+ 
+    
+  }
+  
+  .accordion-item:target img {
+    transform: rotate(180deg);
+    transition: 0.5s;
+  
+  }
+
+  @media (min-width: 880px){
+    body{
+        background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+        background-repeat: no-repeat;
+        justify-content: center;
+           position: relative;  
+    }
+   
+   
+   
+    main{
+        background-color: #fff;
+        display: flex;
+        flex-direction: row;
+        width: 80%;   
+        top: 6em;
+    
+    }
+
+    h1{
+        margin:  1em 0;  
+    }
+
+    .img-mobile{
+        display: none;
+    }
+
+    
+.img-container{
+    transform: translateY(0);
+    margin-bottom: 0;
+/* width: 500px; */
+width: 50%;
+    /* min-width: 500px; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-size: 200%;
+    background-position: 125% 70%;
+    position: relative;
+    z-index: 3;
+    }
+
+
+    .img-desktop{
+        display: block;
+        object-fit: cover;
+        object-position: -80px;
+    }
+
+    .img-desktop-box{
+        display: inline-block;
+        position: absolute;
+        z-index: 4;
+        left: -8em;
+        top: 14em;
+    }
+
+    .accordion-wrapper{
+        padding: 4em;
+        display: flex;
+        width: 100%;
+        min-width: 50%;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: clamp(.2rem, 1.5vw, 1rem);
+        color: var(--paragraph-lighter);  
+   
+    }
+
+    .accordion-item{
+        border-bottom: 1px solid hsl(240, 5%, 91%);
+        margin-bottom: 1em;
+        width: 100%;
+    
+    }
+
+    .accordion-item p{
+        font-size: clamp(.2rem, 1vw, 1rem);
+    }
+
+    .answer{
+        font-size: clamp(.2rem, 1vw, 1rem);
+    }
+    
+
+  }
+
+
+
